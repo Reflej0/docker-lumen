@@ -5,6 +5,8 @@ nginx:
     - php
   ports:
     - "80:80"
+  volumes_from:
+    - php
 php:
   build: images/php
   volumes:
@@ -19,7 +21,7 @@ php:
   environment:
     APP_ENV: local
     APP_DEBUG: 'true'
-    APP_KEY: SomeRandomKey!!!
+    APP_KEY: J2uoekxkzN
     APP_LOCALE: en
     APP_FALLBACK_LOCALE: en
     DB_CONNECTION: mysql
